@@ -15,10 +15,8 @@ app = Flask(__name__)
 load_dotenv()
 
 # 初始化 LINE Bot
+line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
 handler = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET"))
-line_bot_api = MessagingApi(
-    channel_access_token=os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
-)
 
 BOOKING_JSON_PATH = "flex_booking.json"
 BOOKED_TIMES = set()
