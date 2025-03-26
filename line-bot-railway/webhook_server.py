@@ -8,8 +8,8 @@ import os
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi(os.getenv("H4NDvwr1yuymumrig90vd/cdbOEiKwOi6Co49XCJsNfjmRocUacXO/SNv2fLpWijwNnmFyNWCJlsPq1hRMifcAV2VvFIwCo78E0aEDrUwJHOUY6lO3dUkBwtpe0JGR0DMWvrUeOhKrHqe85HJpeGEgdB04t89/1O/w1cDnyilFU="))
-handler = WebhookHandler(os.getenv("4494591da8b18a9f81bd216c61b3c4c0"))
+line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
+handler = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET"))
 
 @app.route("/")
 def home():
