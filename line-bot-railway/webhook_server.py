@@ -10,6 +10,7 @@ from linebot.v3.messaging import (
 )
 from linebot.v3.webhooks import MessageEvent, TextMessageContent
 from dotenv import load_dotenv
+from linebot import LineBotApi, WebhookHandler
 
 app = Flask(__name__)
 load_dotenv()
